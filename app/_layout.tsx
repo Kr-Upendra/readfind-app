@@ -3,7 +3,7 @@ import { SplashScreen, Stack, Tabs } from "expo-router";
 import { useFonts } from "expo-font";
 import { useEffect } from "react";
 import icons from "@/constants/icons";
-import TabIcon from "@/components/TabIcon";
+import { TabIcon } from "@/components";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -34,7 +34,7 @@ const RootLayout = () => {
           tabBarActiveTintColor: "#FFDD00",
           tabBarInactiveTintColor: "#A8A8A8",
           tabBarStyle: {
-            backgroundColor: "#000000",
+            backgroundColor: "#121212",
             borderTopWidth: 1,
             borderTopColor: "#232533",
           },

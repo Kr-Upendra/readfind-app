@@ -1,23 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  // NOTE: Update this to include the paths to all of your component files.
   content: ["./app/**/*.{js,jsx,ts,tsx}"],
   presets: [require("nativewind/preset")],
   theme: {
     extend: {
       colors: {
-        black: "#000000", // Background color (black theme)
-        "dark-gray": "#121212", // For darker gray elements (text, borders, etc.)
-
-        // Text Colors
-        yellow: "#FFDD00", // Primary yellow for titles, bold text, and highlights
-        "light-yellow": "#FFEB66", // Light yellow for secondary text and less important details
-        "light-gray": "#A8A8A8", // Lighter gray for secondary content, less important text
-        "gray-600": "#4B4B4B", // Medium gray for dividers, and subtle borders
-
-        // Accents and UI Elements
-        "button-yellow": "#FFDD00", // For buttons and CTA elements
-        "button-hover": "#FFC700", // Hover effect for buttons (darker yellow)
+        primary: "#FFDD00",
+        secondary: "#FFEB66",
+        "dark-primary": "#000000",
+        "dark-secondary": "#121212",
+        "gray-primary": "#A8A8A8",
+        "gray-secondary": "#4B4B4B",
+        "button-primary": "#FFDD00",
+        "button-secondary": "#FFC700",
       },
       fontFamily: {
         "heading-bold": ["Merriweather-Bold", "serif"],

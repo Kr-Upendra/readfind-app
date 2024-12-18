@@ -8,7 +8,7 @@ type Props = {
 
 const TabIcon = ({ icon, color, focused }: Props) => {
   return (
-    <View className="">
+    <View>
       <Image
         source={icon}
         resizeMode="contain"
