@@ -5,8 +5,8 @@ type Props = { isSearchOn?: boolean };
 
 const Header = ({ isSearchOn = true }: Props) => {
   return (
-    <View className="flex-row justify-between items-start p-4">
-      <View className="py-2">
+    <View className="flex-row items-start p-4 ">
+      <View className="py-2 mr-auto">
         <Image
           source={icons.logo}
           resizeMode="cover"

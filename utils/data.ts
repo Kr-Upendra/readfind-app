@@ -84,6 +84,21 @@ const recommendedBooks = [
   },
 ];
 
+const bookmarkedBooks = [
+  {
+    id: 7,
+    title: "The Catcher in the Rye",
+    author: "J.D. Salinger",
+    cover: "https://covers.openlibrary.org/b/id/10101010-L.jpg",
+  },
+  {
+    id: 8,
+    title: "To Kill a Mockingbird",
+    author: "Harper Lee",
+    cover: "https://covers.openlibrary.org/b/id/10102020-L.jpg",
+  },
+];
+
 const genres = [
   { id: 1, name: "Fiction", icon: "book" },
   { id: 2, name: "Mystery", icon: "search" },
@@ -156,4 +171,4 @@ const genreBooks = {
   ],
 };
 
-export { featuredBooks, recommendedBooks, genres, genreBooks };
+export { featuredBooks, recommendedBooks, genres, genreBooks, bookmarkedBooks };

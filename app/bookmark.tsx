@@ -7,7 +7,7 @@ const BookMark = () => {
     <SafeAreaView className="bg-dark-secondary h-full">
       <Header />
       <View className="flex flex-1 justify-center items-center">
-        <Text className="text-2xl text-green-500 font-heading-bold">
+        <Text className="text-2xl text-green-500 font-heading-regular">
           Bookmark Screen
         </Text>
       </View>

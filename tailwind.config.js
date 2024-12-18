@@ -15,8 +15,7 @@ module.exports = {
         "button-secondary": "#FFC700",
       },
       fontFamily: {
-        "heading-bold": ["Merriweather-Bold", "serif"],
-        "heading-regular": ["Merriweather-Regular", "serif"],
+        "heading-regular": ["fredoka-one-regular", "system-ui"],
         "body-bold": ["OpenSans-Bold", "sans-serif"],
         "body-extrabold": ["OpenSans-ExtraBold", "sans-serif"],
         "body-light": ["OpenSans-Light", "sans-serif"],

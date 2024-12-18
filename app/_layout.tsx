@@ -9,8 +9,7 @@ SplashScreen.preventAutoHideAsync();
 
 const RootLayout = () => {
   const [fontsLoaded, error] = useFonts({
-    "Merriweather-Bold": require("../assets/fonts/Merriweather-Bold.ttf"),
-    "Merriweather-Regular": require("../assets/fonts/Merriweather-Regular.ttf"),
+    "fredoka-one-regular": require("../assets/fonts/fredoka-one-regular.ttf"),
     "OpenSans-Bold": require("../assets/fonts/OpenSans-Bold.ttf"),
     "OpenSans-ExtraBold": require("../assets/fonts/OpenSans-ExtraBold.ttf"),
     "OpenSans-Light": require("../assets/fonts/OpenSans-Light.ttf"),
@@ -36,7 +35,7 @@ const RootLayout = () => {
           tabBarStyle: {
             backgroundColor: "#121212",
             borderTopWidth: 1,
-            borderTopColor: "#232533",
+            borderTopColor: "#121212",
           },
         }}
       >
