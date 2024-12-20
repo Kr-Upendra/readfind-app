@@ -2,7 +2,7 @@ import icons from "@/constants/icons";
 
 const featuredBooks = [
   {
-    id: 1,
+    id: "f1",
     title: "The Midnight Library",
     author: "Matt Haig",
     description:
@@ -10,7 +10,7 @@ const featuredBooks = [
     cover: "https://covers.openlibrary.org/b/id/10138676-L.jpg",
   },
   {
-    id: 2,
+    id: "f2",
     title: "Where the Crawdads Sing",
     author: "Delia Owens",
     description:
@@ -18,7 +18,7 @@ const featuredBooks = [
     cover: "https://covers.openlibrary.org/b/id/10314850-L.jpg",
   },
   {
-    id: 3,
+    id: "f3",
     title: "The Song of Achilles",
     author: "Madeline Miller",
     description:
@@ -26,7 +26,7 @@ const featuredBooks = [
     cover: "https://covers.openlibrary.org/b/id/8259264-L.jpg",
   },
   {
-    id: 4,
+    id: "f4",
     title: "Educated",
     author: "Tara Westover",
     description:
@@ -34,12 +34,64 @@ const featuredBooks = [
     cover: "https://covers.openlibrary.org/b/id/8287205-L.jpg",
   },
   {
-    id: 5,
+    id: "f5",
     title: "Circe",
     author: "Madeline Miller",
     description:
       "A retelling of the myth of Circe, the enchantress from Greek mythology.",
     cover: "https://covers.openlibrary.org/b/id/8152783-L.jpg",
+  },
+  {
+    id: "f6",
+    title: "Becoming",
+    author: "Michelle Obama",
+    description:
+      "A memoir by the former First Lady of the United States, sharing her personal story and journey.",
+    cover: "https://covers.openlibrary.org/b/id/8346992-L.jpg",
+  },
+  {
+    id: "f7",
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    description:
+      "A classic American novel about love, wealth, and the American Dream in the Roaring Twenties.",
+    cover: "https://covers.openlibrary.org/b/id/10309147-L.jpg",
+  },
+  {
+    id: "f8",
+    title: "The Catcher in the Rye",
+    author: "J.D. Salinger",
+    description:
+      "A story about the struggles of adolescence and the quest for identity in a cynical world.",
+    cover: "https://covers.openlibrary.org/b/id/10224087-L.jpg",
+  },
+  {
+    id: "f9",
+    title: "1984",
+    author: "George Orwell",
+    description:
+      "A dystopian novel about a totalitarian regime that controls all aspects of life, including truth and freedom.",
+    cover: "https://covers.openlibrary.org/b/id/8520082-L.jpg",
+  },
+  {
+    id: "f10",
+    title: "Sapiens: A Brief History of Humankind",
+    author: "Yuval Noah Harari",
+    description:
+      "A fascinating exploration of the history of humanity from ancient times to the present.",
+    cover: "https://covers.openlibrary.org/b/id/8624993-L.jpg",
+  },
+  {
+    id: "f11",
+    title: "The Catcher in the Rye",
+    author: "J.D. Salinger",
+    cover: "https://covers.openlibrary.org/b/id/10101010-L.jpg",
+  },
+  {
+    id: "f12",
+    title: "To Kill a Mockingbird",
+    author: "Harper Lee",
+    cover: "https://covers.openlibrary.org/b/id/10102020-L.jpg",
   },
 ];
 
