@@ -1,5 +1,5 @@
 import "../global.css";
-import { SplashScreen, Stack, Tabs } from "expo-router";
+import { SplashScreen, Tabs } from "expo-router";
 import { useFonts } from "expo-font";
 import { useEffect } from "react";
 import icons from "@/constants/icons";

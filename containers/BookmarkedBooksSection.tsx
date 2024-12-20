@@ -9,7 +9,7 @@ type Props = {
 
 const BookmarkedBooksSection = ({ books }: Props) => {
   return (
-    <View className="bg-gray-secondary/40 rounded-2xl p-3">
+    <View className="horizontal-scroll-container">
       <SectionHeader
         title="Bookmarked Books"
         onArrowPress={() => {}}

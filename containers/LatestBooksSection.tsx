@@ -1,20 +1,21 @@
-import React from "react";
-import { FlatList, View } from "react-native";
 import { BookCard, SectionHeader } from "@/components";
 import icons from "@/constants/icons";
+import React from "react";
+import { FlatList, View } from "react-native";
 
 type Props = {
   books: any[];
 };
 
-const RecommendedBooksSection = ({ books }: Props) => {
+const LatestBooksSection = ({ books }: Props) => {
   return (
-    <View className="bg-gray-secondary/40 rounded-2xl p-3">
+    <View className="horizontal-scroll-container">
       <SectionHeader
-        title="Recommended Books"
+        title="Latest Books"
         onArrowPress={() => {}}
         arrowIcon={icons.rightArrow}
       />
+
       <FlatList
         data={books}
         horizontal
@@ -32,4 +33,4 @@ const RecommendedBooksSection = ({ books }: Props) => {
   );
 };
 
-export default RecommendedBooksSection;
+export default LatestBooksSection;

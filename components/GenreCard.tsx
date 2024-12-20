@@ -1,0 +1,32 @@
+import {
+  Image,
+  ImageSourcePropType,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
+
+type Props = { genre: string; icon: ImageSourcePropType; onPress: () => void };
+
+const GenreCard = ({ genre, icon, onPress }: Props) => {
+  return (
+    <TouchableOpacity
+      className="mr-6 w-[180px] bg-green-200/5 p-4 rounded-xl"
+      onPress={onPress}
+    >
+      <View className="items-center pt-6 pb-4">
+        <View className="mb-4 p-5 rounded-xl bg-secondary/5 shadow-xl shadow-black/20">
+          <Image
+            source={icon}
+            className="w-16 h-16"
+            tintColor={"#FFEB66"}
+            resizeMode="contain"
+          />
+        </View>
+        <Text className="font-heading-regular text-white text-xl">{genre}</Text>
+      </View>
+    </TouchableOpacity>
+  );
+};
+
+export default GenreCard;

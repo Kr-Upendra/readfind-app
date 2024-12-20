@@ -1,3 +1,5 @@
+import icons from "@/constants/icons";
+
 const featuredBooks = [
   {
     id: 1,
@@ -100,16 +102,16 @@ const bookmarkedBooks = [
 ];
 
 const genres = [
-  { id: 1, name: "Fiction", icon: "book" },
-  { id: 2, name: "Mystery", icon: "search" },
-  { id: 3, name: "Fantasy", icon: "magic" },
-  { id: 4, name: "Biography", icon: "user" },
-  { id: 5, name: "Self-Help", icon: "lightbulb" },
-  { id: 6, name: "Science", icon: "flask" },
-  { id: 7, name: "History", icon: "globe" },
-  { id: 8, name: "Romance", icon: "heart" },
-  { id: 9, name: "Horror", icon: "ghost" },
-  { id: 10, name: "Poetry", icon: "pen" },
+  { id: 1, name: "Fiction", icon: icons.genre_fiction },
+  { id: 2, name: "Mystery", icon: icons.genre_mystery },
+  { id: 3, name: "Fantasy", icon: icons.genre_fantasy },
+  { id: 4, name: "Biography", icon: icons.genre_biography },
+  { id: 5, name: "Self-Help", icon: icons.genre_self_help },
+  { id: 6, name: "Science", icon: icons.genre_science },
+  { id: 7, name: "History", icon: icons.genre_history },
+  { id: 8, name: "Romance", icon: icons.genre_romance },
+  { id: 9, name: "Horror", icon: icons.genre_horror },
+  { id: 10, name: "Poetry", icon: icons.genre_poetry },
 ];
 
 const genreBooks = {
