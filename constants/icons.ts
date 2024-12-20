@@ -14,6 +14,7 @@ import genre_poetry from "../assets/icons/genre_poetry.png";
 import genre_romance from "../assets/icons/genre_romance.png";
 import genre_science from "../assets/icons/genre_science.png";
 import genre_self_help from "../assets/icons/genre_self_help.png";
+import empty from "../assets/icons/empty.png";
 
 export default {
   bookmark,
@@ -32,4 +33,5 @@ export default {
   genre_romance,
   genre_science,
   genre_self_help,
+  empty,
 };

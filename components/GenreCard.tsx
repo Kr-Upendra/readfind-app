@@ -6,12 +6,17 @@ import {
   View,
 } from "react-native";
 
-type Props = { genre: string; icon: ImageSourcePropType; onPress: () => void };
+type Props = {
+  genre: string;
+  icon: ImageSourcePropType;
+  onPress: () => void;
+  extraStyle?: string;
+};
 
-const GenreCard = ({ genre, icon, onPress }: Props) => {
+const GenreCard = ({ genre, icon, onPress, extraStyle }: Props) => {
   return (
     <TouchableOpacity
-      className="mr-6 w-[180px] bg-green-200/5 p-4 rounded-xl"
+      className={`mr-6 w-[180px] bg-green-200/5 p-4 rounded-xl ${extraStyle}`}
       onPress={onPress}
     >
       <View className="items-center pt-6 pb-4">
@@ -23,7 +28,7 @@ const GenreCard = ({ genre, icon, onPress }: Props) => {
             resizeMode="contain"
           />
         </View>
-        <Text className="font-heading-regular text-white text-xl">{genre}</Text>
+        <Text className="font-body-bold text-white text-xl">{genre}</Text>
       </View>
     </TouchableOpacity>
   );
