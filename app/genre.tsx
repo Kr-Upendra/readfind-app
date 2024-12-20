@@ -13,7 +13,7 @@ const Genre = () => {
         numColumns={2}
         renderItem={({ item }) => (
           <GenreCard
-            extraStyle="w-[49%] mr-0"
+            extraStyle="w-[48%] mr-0"
             genre={item.name}
             icon={item.icon}
             onPress={() => {}}
@@ -28,9 +28,10 @@ const Genre = () => {
           </View>
         )}
         ListFooterComponent={() => <View className="h-8" />}
-        columnWrapperStyle={{ columnGap: 10 }}
-        contentContainerStyle={{ rowGap: 10 }}
-        className="px-4 py-4 bg-dark-primary flex-1"
+        contentContainerStyle={{
+          rowGap: 20,
+        }}
+        className="p-4 bg-dark-primary"
         ListEmptyComponent={() => <EmptyState />}
       />
     </SafeAreaView>

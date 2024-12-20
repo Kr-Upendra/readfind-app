@@ -8,6 +8,10 @@ module.exports = {
   presets: [require("nativewind/preset")],
   theme: {
     extend: {
+      backgroundImage: {
+        "gradient-to-r": "linear-gradient(to right, var(--tw-gradient-stops))",
+        "gradient-to-t": "linear-gradient(to top, var(--tw-gradient-stops))",
+      },
       colors: {
         primary: "#FFDD00",
         secondary: "#FFEB66",

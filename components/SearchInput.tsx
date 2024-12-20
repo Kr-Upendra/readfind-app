@@ -22,9 +22,9 @@ const SearchInput = ({
   keyboardType = "default",
 }: Props) => {
   return (
-    <View className="rounded-lg space-x-4 border-2 border-secondary w-full h-16 px-4 items-center flex-row">
+    <View className="rounded-lg bg-dark-secondary border-secondary border-2 w-full h-16 items-center flex-row">
       <TextInput
-        className="text-lg mt-0.5 text-white flex-1  placeholder:font-body-medium"
+        className="text-lg h-full text-primary font-body-bold flex-1 focus:bg-dark-secondary rounded-l-lg pl-2 border border-secondary"
         value={value}
         keyboardType={keyboardType}
         placeholder={placeholder}
@@ -32,11 +32,11 @@ const SearchInput = ({
         onChangeText={handleChangeText}
       />
 
-      <TouchableOpacity>
+      <TouchableOpacity className="w-16 bg-dark-secondary rounded-r-lg flex justify-center items-center h-full">
         <Image
-          className="w-5 h-5"
+          className="w-8 h-8"
           resizeMode="contain"
-          tintColor="#A8A8A8"
+          tintColor="#FFFFFF"
           source={icons.search}
         />
       </TouchableOpacity>

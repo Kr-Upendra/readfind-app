@@ -17,7 +17,7 @@ const BookMark = () => {
             author={item.author}
             cover={item.cover}
             key={item.id}
-            extraStyle="mr-0 w-[49%]"
+            extraStyle="mr-0 w-[48%]"
             imageStyle="h-[220px]"
           />
         )}
@@ -30,8 +30,7 @@ const BookMark = () => {
           </View>
         )}
         ListFooterComponent={() => <View className="h-8" />}
-        columnWrapperStyle={{ columnGap: 10 }}
-        contentContainerStyle={{ rowGap: 10 }}
+        contentContainerStyle={{ rowGap: 15 }}
         className="px-4 py-4 bg-dark-primary flex-1"
         ListEmptyComponent={() => <EmptyState />}
       />
