@@ -28,7 +28,9 @@ const GenreCard = ({ genre, icon, onPress, extraStyle }: Props) => {
             resizeMode="contain"
           />
         </View>
-        <Text className="font-body-bold text-white text-xl">{genre}</Text>
+        <Text className="text-center font-body-bold text-white text-lg">
+          {genre}
+        </Text>
       </View>
     </TouchableOpacity>
   );

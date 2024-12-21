@@ -16,7 +16,7 @@ const GenreContainer = ({ genres }: Props) => {
         arrowIcon={icons.rightArrow}
       />
       <FlatList
-        data={genres}
+        data={genres.slice(0, 10)}
         horizontal
         renderItem={({ item }) => (
           <GenreCard genre={item.name} icon={item.icon} onPress={() => {}} />
