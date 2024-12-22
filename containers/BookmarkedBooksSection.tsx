@@ -21,6 +21,7 @@ const BookmarkedBooksSection = ({ books }: Props) => {
         horizontal
         renderItem={({ item }) => (
           <BookCard
+            id={item.id}
             title={item.title}
             author={item.author}
             cover={item.cover}

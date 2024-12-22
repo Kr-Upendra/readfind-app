@@ -1,6 +1,8 @@
+import { Link, router } from "expo-router";
 import { Text, TouchableOpacity, Image } from "react-native";
 
 type BookCardProps = {
+  id: string;
   title: string;
   author: string;
   cover: string;
@@ -10,6 +12,7 @@ type BookCardProps = {
 };
 
 const BookCard = ({
+  id,
   title,
   author,
   cover,
@@ -19,7 +22,9 @@ const BookCard = ({
 }: BookCardProps) => {
   return (
     <TouchableOpacity
-      onPress={onPress}
+      onPress={() =>
+        router.push({ pathname: "/details/[bookId]", params: { bookId: id } })
+      }
       className={`mr-6 w-[180px] bg-green-200/10 p-4 rounded-xl ${extraStyle}`}
     >
       <Image
