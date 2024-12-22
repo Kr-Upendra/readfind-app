@@ -7,7 +7,7 @@ import {
   GenreContainer,
   LatestBooksSection,
   PopularBooksSection,
-  RecommendedBooksSection,
+  TeensBooksSection,
 } from "@/containers";
 import { Header } from "@/components";
 
@@ -20,7 +20,7 @@ const App = () => {
         <View className="h-6"></View>
         <PopularBooksSection />
         <View className="h-6"></View>
-        <RecommendedBooksSection />
+        <TeensBooksSection />
         <View className="h-6"></View>
         <BookmarkedBooksSection books={bookmarkedBooks} />
         <View className="h-6"></View>

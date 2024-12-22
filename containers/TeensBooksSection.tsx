@@ -1,19 +1,20 @@
+import React from "react";
 import { FlatList, View } from "react-native";
-import { useQuery } from "@tanstack/react-query";
 import { BookCard, ErrorCard, LoadingCard, SectionHeader } from "@/components";
-import { placeholderData } from "@/utils";
-import { getPopularBooks } from "@/services";
 import icons from "@/constants/icons";
+import { placeholderData } from "@/utils";
+import { useQuery } from "@tanstack/react-query";
+import { getTeensBooks } from "@/services";
 
-const PopularBooksSection = () => {
+const TeensBooksSection = () => {
   const {
-    data: popularBooks,
+    data: teensBooks,
     isLoading,
     error,
     refetch,
   } = useQuery({
-    queryKey: ["popular-books"],
-    queryFn: getPopularBooks,
+    queryKey: ["teens-books"],
+    queryFn: getTeensBooks,
   });
 
   return (
@@ -28,7 +29,7 @@ const PopularBooksSection = () => {
         <ErrorCard onRefresh={() => refetch()} />
       ) : (
         <FlatList
-          data={isLoading ? placeholderData : popularBooks?.data.slice(0, 10)}
+          data={isLoading ? placeholderData : teensBooks?.data.slice(0, 10)}
           horizontal
           renderItem={({ item }) =>
             isLoading ? (
@@ -49,4 +50,4 @@ const PopularBooksSection = () => {
   );
 };
 
-export default PopularBooksSection;
+export default TeensBooksSection;

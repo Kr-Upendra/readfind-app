@@ -1,13 +1,13 @@
 import LatestBooksSection from "./LatestBooksSection";
 import BookmarkedBooksSection from "./BookmarkedBooksSection";
-import RecommendedBooksSection from "./RecommendedBooksSection";
+import TeensBooksSection from "./TeensBooksSection";
 import GenreContainer from "./GenreContainer";
 import PopularBooksSection from "./PopularBookSection";
 
 export {
   LatestBooksSection,
   BookmarkedBooksSection,
-  RecommendedBooksSection,
+  TeensBooksSection,
   GenreContainer,
   PopularBooksSection,
 };
