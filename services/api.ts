@@ -5,3 +5,9 @@ export const getLatestBooks = async () => {
     method: "GET",
   });
 };
+
+export const getPopularBooks = async () => {
+  return globalFetch(`/popular-books`, {
+    method: "GET",
+  });
+};
