@@ -16,11 +16,11 @@ type Props = {
 const GenreCard = ({ genre, icon, onPress, extraStyle }: Props) => {
   return (
     <TouchableOpacity
-      className={`mr-6 w-[180px] bg-green-200/5 p-4 rounded-xl ${extraStyle}`}
+      className={`mr-6 w-[180px] bg-green-200/10 p-4 rounded-xl ${extraStyle}`}
       onPress={onPress}
     >
       <View className="items-center pt-6 pb-4">
-        <View className="mb-4 p-5 rounded-xl bg-secondary/5 shadow-xl shadow-black/20">
+        <View className="mb-4 p-5 rounded-xl bg-secondary/10 shadow-xl shadow-black/20">
           <Image
             source={icon}
             className="w-16 h-16"

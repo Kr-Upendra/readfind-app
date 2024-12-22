@@ -20,7 +20,7 @@ const BookCard = ({
   return (
     <TouchableOpacity
       onPress={onPress}
-      className={`mr-6 w-[180px] bg-green-200/5 p-4 rounded-xl ${extraStyle}`}
+      className={`mr-6 w-[180px] bg-green-200/10 p-4 rounded-xl ${extraStyle}`}
     >
       <Image
         source={{ uri: cover }}

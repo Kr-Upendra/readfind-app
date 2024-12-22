@@ -161,16 +161,71 @@ const genres = [
     searchWord: "Animals",
   },
   {
-    id: "genre1001",
-    name: "Australiana",
-    icon: genreIcons.genre_australiana,
-    searchWord: "Australiana",
+    id: "genre1011",
+    name: "Education",
+    icon: genreIcons.genre_education,
+    searchWord: "Education",
+  },
+  {
+    id: "genre1012",
+    name: "Entertainment",
+    icon: genreIcons.genre_entertainment,
+    searchWord: "Entertainment",
+  },
+  {
+    id: "genre1014",
+    name: "LGBT",
+    icon: genreIcons.genre_lgbt,
+    searchWord: "Gay, Lesbian, Bisexual and Transgender",
+  },
+  {
+    id: "genre1016",
+    name: "History",
+    icon: genreIcons.genre_history,
+    searchWord: "History",
+  },
+  {
+    id: "genre1018",
+    name: "Horror",
+    icon: genreIcons.genre_horror,
+    searchWord: "Horror",
+  },
+  {
+    id: "genre1019",
+    name: "Humor",
+    icon: genreIcons.genre_humor,
+    searchWord: "Humor",
+  },
+  {
+    id: "genre1045",
+    name: "Technology",
+    icon: genreIcons.genre_technology,
+    searchWord: "Technology",
+  },
+  {
+    id: "genre1046",
+    name: "Teens",
+    icon: genreIcons.genre_teen,
+    searchWord: "Teens",
+  },
+
+  {
+    id: "genre1048",
+    name: "Travel",
+    icon: genreIcons.genre_travel,
+    searchWord: "Travel",
   },
   {
     id: "genre1002",
     name: "Biographies and Memoirs",
     icon: genreIcons.genre_biography,
     searchWord: "Biographies and Memoirs",
+  },
+  {
+    id: "genre1047",
+    name: "Textbooks",
+    icon: genreIcons.genre_textbook,
+    searchWord: "Textbooks",
   },
   {
     id: "genre1003",
@@ -221,16 +276,10 @@ const genres = [
     searchWord: "Earth Sciences",
   },
   {
-    id: "genre1011",
-    name: "Education",
-    icon: genreIcons.genre_education,
-    searchWord: "Education",
-  },
-  {
-    id: "genre1012",
-    name: "Entertainment",
-    icon: genreIcons.genre_entertainment,
-    searchWord: "Entertainment",
+    id: "genre1001",
+    name: "Australiana",
+    icon: genreIcons.genre_australiana,
+    searchWord: "Australiana",
   },
   {
     id: "genre1013",
@@ -238,12 +287,7 @@ const genres = [
     icon: genreIcons.genre_language_study,
     searchWord: "Foreign Language Study",
   },
-  {
-    id: "genre1014",
-    name: "LGBT",
-    icon: genreIcons.genre_lgbt,
-    searchWord: "Gay, Lesbian, Bisexual and Transgender",
-  },
+
   {
     id: "genre1015",
     name: "Health, Mind and Body",
@@ -252,29 +296,12 @@ const genres = [
   },
 
   {
-    id: "genre1016",
-    name: "History",
-    icon: genreIcons.genre_history,
-    searchWord: "History",
-  },
-  {
     id: "genre1017",
     name: "Home and Garden",
     icon: genreIcons.genre_home,
     searchWord: "Home and Garden",
   },
-  {
-    id: "genre1018",
-    name: "Horror",
-    icon: genreIcons.genre_horror,
-    searchWord: "Horror",
-  },
-  {
-    id: "genre1019",
-    name: "Humor",
-    icon: genreIcons.genre_humor,
-    searchWord: "Humor",
-  },
+
   {
     id: "genre1020",
     name: "Language Arts",
@@ -426,30 +453,7 @@ const genres = [
     icon: genreIcons.genre_study_guide,
     searchWord: "Study Guides",
   },
-  {
-    id: "genre1045",
-    name: "Technology",
-    icon: genreIcons.genre_technology,
-    searchWord: "Technology",
-  },
-  {
-    id: "genre1046",
-    name: "Teens",
-    icon: genreIcons.genre_teen,
-    searchWord: "Teens",
-  },
-  {
-    id: "genre1047",
-    name: "Textbooks",
-    icon: genreIcons.genre_textbook,
-    searchWord: "Textbooks",
-  },
-  {
-    id: "genre1048",
-    name: "Travel",
-    icon: genreIcons.genre_travel,
-    searchWord: "Travel",
-  },
+
   {
     id: "genre1049",
     name: "Westerns",

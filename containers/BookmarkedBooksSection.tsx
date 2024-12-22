@@ -1,5 +1,6 @@
 import { BookCard, SectionHeader } from "@/components";
 import icons from "@/constants/icons";
+import { router } from "expo-router";
 import React from "react";
 import { FlatList, View } from "react-native";
 
@@ -12,7 +13,7 @@ const BookmarkedBooksSection = ({ books }: Props) => {
     <View className="horizontal-scroll-container">
       <SectionHeader
         title="Bookmarked Books"
-        onArrowPress={() => {}}
+        onArrowPress={() => router.push("/bookmark")}
         arrowIcon={icons.rightArrow}
       />
       <FlatList

@@ -2,6 +2,7 @@ import { FlatList, View } from "react-native";
 import React from "react";
 import { GenreCard, SectionHeader } from "@/components";
 import icons from "@/constants/icons";
+import { router } from "expo-router";
 
 type Props = {
   genres: any[];
@@ -12,7 +13,7 @@ const GenreContainer = ({ genres }: Props) => {
     <View className="horizontal-scroll-container">
       <SectionHeader
         title="Available Genres"
-        onArrowPress={() => {}}
+        onArrowPress={() => router.push("/genre")}
         arrowIcon={icons.rightArrow}
       />
       <FlatList
