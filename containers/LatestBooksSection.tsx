@@ -1,34 +1,51 @@
-import { BookCard, SectionHeader } from "@/components";
+import { BookCard, ErrorCard, LoadingCard, SectionHeader } from "@/components";
 import icons from "@/constants/icons";
+import { getLatestBooks } from "@/services";
+import { placeholderData } from "@/utils";
+import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import { FlatList, View } from "react-native";
 
-type Props = {
-  books: any[];
-};
+const LatestBooksSection = () => {
+  const {
+    data: latestBooks,
+    isLoading,
+    error,
+    refetch,
+  } = useQuery({
+    queryKey: ["latest-books"],
+    queryFn: getLatestBooks,
+  });
 
-const LatestBooksSection = ({ books }: Props) => {
   return (
     <View className="horizontal-scroll-container">
       <SectionHeader
-        title="Latest Books"
+        title="Newly added books"
         onArrowPress={() => {}}
         arrowIcon={icons.rightArrow}
       />
 
-      <FlatList
-        data={books}
-        horizontal
-        renderItem={({ item }) => (
-          <BookCard
-            title={item.title}
-            author={item.author}
-            cover={item.cover}
-            onPress={() => {}}
-          />
-        )}
-        keyExtractor={(item) => item.id.toString()}
-      />
+      {error ? (
+        <ErrorCard onRefresh={() => refetch()} />
+      ) : (
+        <FlatList
+          data={isLoading ? placeholderData : latestBooks?.data.slice(0, 10)}
+          horizontal
+          renderItem={({ item }) =>
+            isLoading ? (
+              <LoadingCard key={item.id} />
+            ) : (
+              <BookCard
+                title={item.title}
+                author={item.author}
+                cover={item.image}
+                onPress={() => {}}
+              />
+            )
+          }
+          keyExtractor={(item) => item.id.toString()}
+        />
+      )}
     </View>
   );
 };

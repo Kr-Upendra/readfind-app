@@ -5,6 +5,8 @@ import SectionHeader from "./SectionHeader";
 import GenreCard from "./GenreCard";
 import SearchInput from "./SearchInput";
 import EmptyState from "./EmptyState";
+import LoadingCard from "./LoadingCard";
+import ErrorCard from "./ErrorCard";
 
 export {
   Header,
@@ -14,4 +16,6 @@ export {
   GenreCard,
   SearchInput,
   EmptyState,
+  LoadingCard,
+  ErrorCard,
 };

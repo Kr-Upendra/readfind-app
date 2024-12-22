@@ -1,2 +1,2 @@
 export * from "./data";
-export * from "./globalApi";
+export * from "./globalFetch";

@@ -1,12 +1,7 @@
 import { ScrollView, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
-import {
-  bookmarkedBooks,
-  featuredBooks,
-  genres,
-  recommendedBooks,
-} from "@/utils";
+import { bookmarkedBooks, genres, recommendedBooks } from "@/utils";
 import {
   BookmarkedBooksSection,
   GenreContainer,
@@ -20,7 +15,7 @@ const App = () => {
     <SafeAreaView className="bg-dark-secondary h-full">
       <Header />
       <ScrollView className="p-4 pt-8 bg-dark-primary h-full">
-        <LatestBooksSection books={featuredBooks} />
+        <LatestBooksSection />
         <View className="h-6"></View>
         <RecommendedBooksSection books={recommendedBooks} />
         <View className="h-6"></View>

@@ -521,4 +521,15 @@ const genreBooks = {
   ],
 };
 
-export { featuredBooks, recommendedBooks, genres, genreBooks, bookmarkedBooks };
+const placeholderData = Array.from({ length: 5 }, (_, index) => ({
+  id: `placeholder-${index}`,
+}));
+
+export {
+  featuredBooks,
+  recommendedBooks,
+  genres,
+  genreBooks,
+  bookmarkedBooks,
+  placeholderData,
+};
