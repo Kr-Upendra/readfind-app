@@ -3,10 +3,13 @@ import icons from "@/constants/icons";
 import { getLatestBooks } from "@/services";
 import { placeholderData } from "@/utils";
 import { useQuery } from "@tanstack/react-query";
+import { useRouter } from "expo-router";
 import React from "react";
 import { FlatList, View } from "react-native";
 
 const LatestBooksSection = () => {
+  const router = useRouter();
+
   const {
     data: latestBooks,
     isLoading,
@@ -21,7 +24,9 @@ const LatestBooksSection = () => {
     <View className="horizontal-scroll-container">
       <SectionHeader
         title="Newly added books"
-        onArrowPress={() => {}}
+        onArrowPress={() => {
+          router.push("/(lists)/bookLists?list=new-books");
+        }}
         arrowIcon={icons.rightArrow}
       />
 
@@ -40,7 +45,6 @@ const LatestBooksSection = () => {
                 title={item.title}
                 author={item.author}
                 cover={item.image}
-               
               />
             )
           }

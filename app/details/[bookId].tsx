@@ -14,6 +14,8 @@ const BookDetail = () => {
   } = useQuery({
     queryKey: ["book-details", bookId],
     queryFn: () => getBookDetails(bookId as string),
+    staleTime: 1000 * 60 * 60,
+    refetchOnWindowFocus: false,
   });
 
   return (

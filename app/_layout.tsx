@@ -4,6 +4,7 @@ import { SplashScreen, Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
 import "../global.css";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -44,6 +45,18 @@ const RootLayout = () => {
               },
             }}
           />
+          {/* <Stack.Screen
+            name="(lists)/bookLists"
+            options={{
+              title: "Book Lists",
+              headerStyle: { backgroundColor: "#121212" },
+              headerTintColor: "#FFFFFF",
+              headerTitleStyle: {
+                fontWeight: "bold",
+                fontFamily: "fredoka-one-regular",
+              },
+            }}
+          /> */}
         </Stack>
         <StatusBar style="auto" />
       </QueryClientProvider>

@@ -16,7 +16,6 @@ const BookCard = ({
   title,
   author,
   cover,
-
   extraStyle,
   imageStyle,
 }: BookCardProps) => {

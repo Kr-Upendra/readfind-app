@@ -5,11 +5,12 @@ import icons from "@/constants/icons";
 type Props = {
   errorType?: string;
   message?: string;
+  extraStyle?: string;
 };
 
-const EmptyState = ({ errorType, message }: Props) => {
+const EmptyState = ({ errorType, message, extraStyle }: Props) => {
   return (
-    <View className="h-[50vh] justify-center mt-20 bg-dark-primary">
+    <View className={`h-[50vh] justify-center bg-dark-primary ${extraStyle}`}>
       <Image
         className="w-full h-[35vh] rounded-md"
         resizeMode="cover"

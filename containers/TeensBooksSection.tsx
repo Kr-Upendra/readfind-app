@@ -5,8 +5,10 @@ import icons from "@/constants/icons";
 import { placeholderData } from "@/utils";
 import { useQuery } from "@tanstack/react-query";
 import { getTeensBooks } from "@/services";
+import { useRouter } from "expo-router";
 
 const TeensBooksSection = () => {
+  const router = useRouter();
   const {
     data: teensBooks,
     isLoading,
@@ -20,8 +22,8 @@ const TeensBooksSection = () => {
   return (
     <View className="horizontal-scroll-container">
       <SectionHeader
-        title="Top Books of the Month"
-        onArrowPress={() => {}}
+        title="Teen's Favorite Books"
+        onArrowPress={() => router.push("/(lists)/bookLists?list=teens-book")}
         arrowIcon={icons.rightArrow}
       />
 

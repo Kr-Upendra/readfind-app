@@ -4,8 +4,10 @@ import { BookCard, ErrorCard, LoadingCard, SectionHeader } from "@/components";
 import { placeholderData } from "@/utils";
 import { getPopularBooks } from "@/services";
 import icons from "@/constants/icons";
+import { useRouter } from "expo-router";
 
 const PopularBooksSection = () => {
+  const router = useRouter();
   const {
     data: popularBooks,
     isLoading,
@@ -20,7 +22,9 @@ const PopularBooksSection = () => {
     <View className="horizontal-scroll-container">
       <SectionHeader
         title="Top Books of the Month"
-        onArrowPress={() => {}}
+        onArrowPress={() =>
+          router.push("/(lists)/bookLists?list=popular-books")
+        }
         arrowIcon={icons.rightArrow}
       />
 
