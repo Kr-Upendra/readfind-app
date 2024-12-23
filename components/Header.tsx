@@ -5,7 +5,7 @@ type Props = { isSearchOn?: boolean };
 
 const Header = ({ isSearchOn = true }: Props) => {
   return (
-    <View className="flex-row items-start p-4 ">
+    <View className="flex-row items-start p-4 bg-dark-secondary">
       <View className="py-2 mr-auto">
         <Image
           source={icons.logo}
@@ -19,7 +19,7 @@ const Header = ({ isSearchOn = true }: Props) => {
             source={icons.search}
             resizeMode="contain"
             style={{ width: 24, height: 24 }}
-            tintColor="#A8A8A8"
+            tintColor={"white"}
           />
         </TouchableOpacity>
       )}

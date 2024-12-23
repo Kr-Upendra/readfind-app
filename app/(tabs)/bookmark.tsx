@@ -1,11 +1,10 @@
 import { BookCard, EmptyState, Header, SearchInput } from "@/components";
 import { featuredBooks } from "@/utils";
 import { View, Text, FlatList } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 const BookMark = () => {
   return (
-    <SafeAreaView className="bg-dark-secondary flex-1">
+    <>
       <Header isSearchOn={false} />
       <FlatList
         data={featuredBooks}
@@ -13,6 +12,7 @@ const BookMark = () => {
         numColumns={2}
         renderItem={({ item }) => (
           <BookCard
+            id={item.id}
             title={item.title}
             author={item.author}
             cover={item.cover}
@@ -34,7 +34,7 @@ const BookMark = () => {
         className="px-4 py-4 bg-dark-primary flex-1"
         ListEmptyComponent={() => <EmptyState />}
       />
-    </SafeAreaView>
+    </>
   );
 };
 

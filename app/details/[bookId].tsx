@@ -1,22 +1,17 @@
+import { Header } from "@/components";
 import { useLocalSearchParams } from "expo-router";
-import {
-  View,
-  Text,
-  Image,
-  TextInput,
-  ScrollView,
-  TouchableOpacity,
-} from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 
-const BookDetails = ({ route }: any) => {
+const BookDetails = () => {
   const { bookId } = useLocalSearchParams();
   console.log(bookId);
 
   const book: any = {};
 
   return (
-    <ScrollView className="flex-grow bg-gray-100 p-4">
-      <View className="flex-row mb-6 bg-white p-4 rounded-lg shadow-lg">
+    <>
+      <Header isSearchOn={false} />
+      <View className="flex-row mb-6 bg-black p-4 rounded-lg shadow-lg">
         <Image
           source={{ uri: book.coverImage }}
           className="w-40 h-60 rounded-md mr-4"
@@ -58,9 +53,7 @@ const BookDetails = ({ route }: any) => {
         <Text className="text-xl font-bold mb-2">Description</Text>
         <Text className="text-sm text-gray-700">{book.description}</Text>
       </View>
-
-      {/* Reviews Section */}
-    </ScrollView>
+    </>
   );
 };
 

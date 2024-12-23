@@ -1,11 +1,10 @@
-import { SafeAreaView } from "react-native-safe-area-context";
 import { View, Text, FlatList } from "react-native";
 import { EmptyState, GenreCard, Header, SearchInput } from "@/components";
 import { genres } from "@/utils";
 
 const Genre = () => {
   return (
-    <SafeAreaView className="bg-dark-secondary flex-1">
+    <>
       <Header isSearchOn={false} />
       <FlatList
         data={genres}
@@ -34,7 +33,7 @@ const Genre = () => {
         className="p-4 bg-dark-primary"
         ListEmptyComponent={() => <EmptyState />}
       />
-    </SafeAreaView>
+    </>
   );
 };
 

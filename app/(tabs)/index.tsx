@@ -1,4 +1,4 @@
-import { ScrollView, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { bookmarkedBooks, genres } from "@/utils";
@@ -10,10 +10,11 @@ import {
   TeensBooksSection,
 } from "@/containers";
 import { Header } from "@/components";
+import { Link } from "expo-router";
 
 const App = () => {
   return (
-    <SafeAreaView className="bg-dark-secondary h-full">
+    <>
       <Header />
       <ScrollView className="p-4 pt-8 bg-dark-primary h-full">
         <LatestBooksSection />
@@ -26,9 +27,11 @@ const App = () => {
         <View className="h-6"></View>
         <GenreContainer genres={genres} />
         <View className="h-16"></View>
+        <Link href={"/"}>
+          <Text>Hello</Text>
+        </Link>
       </ScrollView>
-      <StatusBar style="auto" />
-    </SafeAreaView>
+    </>
   );
 };
 
