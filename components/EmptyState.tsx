@@ -2,16 +2,24 @@ import { View, Text, Image } from "react-native";
 import React from "react";
 import icons from "@/constants/icons";
 
-const EmptyState = () => {
+type Props = {
+  errorType?: string;
+  message?: string;
+};
+
+const EmptyState = ({ errorType, message }: Props) => {
   return (
-    <View className="h-[50vh] justify-center mt-20">
+    <View className="h-[50vh] justify-center mt-20 bg-dark-primary">
       <Image
         className="w-full h-[35vh] rounded-md"
         resizeMode="cover"
         source={icons.empty}
       />
       <Text className="mt-4 text-2xl text-center font-heading-regular text-primary">
-        Found nothing. Please try to search again.
+        {errorType || "INTERNAL SERVER ERROR"}
+      </Text>
+      <Text className="mt-4 text-2xl text-center font-heading-regular text-primary">
+        {message || "Please try to search again."}
       </Text>
     </View>
   );

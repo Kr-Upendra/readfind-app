@@ -17,3 +17,9 @@ export const getTeensBooks = async () => {
     method: "GET",
   });
 };
+
+export const getBookDetails = async (id: string) => {
+  return globalFetch(`/details/${id}`, {
+    method: "GET",
+  });
+};
