@@ -6,7 +6,7 @@ type BookCardProps = {
   title: string;
   author: string;
   cover: string;
-  onPress?: () => void;
+
   extraStyle?: string;
   imageStyle?: string;
 };
@@ -16,13 +16,15 @@ const BookCard = ({
   title,
   author,
   cover,
-  onPress,
+
   extraStyle,
   imageStyle,
 }: BookCardProps) => {
   return (
     <TouchableOpacity
-      onPress={() => router.push("/detail")}
+      onPress={() =>
+        router.push({ pathname: "/details/[bookId]", params: { bookId: id } })
+      }
       className={`mr-6 w-[180px] bg-green-200/10 p-4 rounded-xl ${extraStyle}`}
     >
       <Image

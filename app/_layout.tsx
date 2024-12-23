@@ -1,4 +1,3 @@
-import { SafeAreaView } from "react-native-safe-area-context";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
@@ -35,10 +34,6 @@ const RootLayout = () => {
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen
             name="details/[bookId]"
-            options={{ headerShown: false }}
-          />
-          <Stack.Screen
-            name="detail"
             options={{
               title: "Book Detail",
               headerStyle: { backgroundColor: "#121212" },

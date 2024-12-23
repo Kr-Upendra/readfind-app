@@ -40,7 +40,7 @@ const LatestBooksSection = () => {
                 title={item.title}
                 author={item.author}
                 cover={item.image}
-                onPress={() => {}}
+               
               />
             )
           }

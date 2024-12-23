@@ -25,7 +25,6 @@ const BookmarkedBooksSection = ({ books }: Props) => {
             title={item.title}
             author={item.author}
             cover={item.cover}
-            onPress={() => {}}
           />
         )}
         keyExtractor={(item) => item.id.toString()}
