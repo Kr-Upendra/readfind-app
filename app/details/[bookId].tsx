@@ -1,17 +1,25 @@
 import { Header } from "@/components";
 import { useLocalSearchParams } from "expo-router";
-import { View, Text, Image, TouchableOpacity } from "react-native";
+import { Text, View } from "react-native";
 
 const BookDetails = () => {
   const { bookId } = useLocalSearchParams();
   console.log(bookId);
 
-  const book: any = {};
-
   return (
     <>
       <Header isSearchOn={false} />
-      <View className="flex-row mb-6 bg-black p-4 rounded-lg shadow-lg">
+      <View className="border-2 border-red-500 h-full bg-dark-secondary">
+        <Text>Throne Of Glass (Throne of Glass #1)</Text>
+      </View>
+    </>
+  );
+};
+
+export default BookDetails;
+
+/**
+ <View className="flex-row mb-6 bg-black p-4 rounded-lg shadow-lg">
         <Image
           source={{ uri: book.coverImage }}
           className="w-40 h-60 rounded-md mr-4"
@@ -34,7 +42,6 @@ const BookDetails = () => {
 
           <Text className="text-lg font-bold mb-4">${book.price}</Text>
 
-          {/* Action Buttons */}
           <View className="flex-row justify-between">
             <TouchableOpacity className="bg-black p-2 rounded-lg">
               <Text className="text-white text-sm font-bold">Buy Now</Text>
@@ -48,48 +55,8 @@ const BookDetails = () => {
         </View>
       </View>
 
-      {/* Book Description */}
       <View className="bg-white p-4 rounded-lg shadow-lg mb-6">
         <Text className="text-xl font-bold mb-2">Description</Text>
         <Text className="text-sm text-gray-700">{book.description}</Text>
       </View>
-    </>
-  );
-};
-
-export default BookDetails;
-
-/**
-   
-   <View className="bg-white p-4 rounded-lg shadow-lg">
-          <Text className="text-xl font-bold mb-2">Reviews</Text>
-  
-          { {reviews.length > 0 ? (
-            reviews.map((review, index) => (
-              <View key={index} className='mb-4')}>
-                <Text className='text-sm font-bold')}>{review.user}:</Text>
-                <Text className='text-sm text-gray-700')}>{review.reviewText}</Text>
-              </View>
-            ))
-          ) : (
-            <Text className='text-sm text-gray-500')}>No reviews yet. Be the first to review!</Text>
-          )} }
-  
-          <TextInput
-            className="h-24 p-2 border border-gray-300 rounded-lg mb-4"
-            placeholder="Write your review..."
-            value={review}
-            onChangeText={setReview}
-            multiline
-          />
-          <TouchableOpacity
-            className="bg-blue-600 p-2 rounded-lg")}
-            onPress={submitReview}
-          >
-            <Text className="text-white text-center text-sm font-bold")}>
-              Submit Review
-            </Text>
-          </TouchableOpacity>
-        </View>
-    
-   */
+ */

@@ -31,16 +31,26 @@ const RootLayout = () => {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <SafeAreaView className="bg-dark-secondary flex-1">
-          <Stack>
-            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-            <Stack.Screen
-              name="details/[bookId]"
-              options={{ headerShown: false }}
-            />
-          </Stack>
-          <StatusBar style="auto" />
-        </SafeAreaView>
+        <Stack>
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen
+            name="details/[bookId]"
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="detail"
+            options={{
+              title: "Book Detail",
+              headerStyle: { backgroundColor: "#121212" },
+              headerTintColor: "#FFFFFF",
+              headerTitleStyle: {
+                fontWeight: "bold",
+                fontFamily: "fredoka-one-regular",
+              },
+            }}
+          />
+        </Stack>
+        <StatusBar style="auto" />
       </QueryClientProvider>
     </>
   );

@@ -22,9 +22,7 @@ const BookCard = ({
 }: BookCardProps) => {
   return (
     <TouchableOpacity
-      onPress={() =>
-        router.push({ pathname: "/details/[bookId]", params: { bookId: id } })
-      }
+      onPress={() => router.push("/detail")}
       className={`mr-6 w-[180px] bg-green-200/10 p-4 rounded-xl ${extraStyle}`}
     >
       <Image

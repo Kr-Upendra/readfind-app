@@ -36,6 +36,7 @@ const LatestBooksSection = () => {
               <LoadingCard key={item.id} />
             ) : (
               <BookCard
+                id={item.id}
                 title={item.title}
                 author={item.author}
                 cover={item.image}
