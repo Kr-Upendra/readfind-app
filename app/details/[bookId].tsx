@@ -1,10 +1,12 @@
 import React from "react";
-import { Link, useLocalSearchParams } from "expo-router";
-import { View, Text, ScrollView, Image } from "react-native";
+import { Link, Stack, useLocalSearchParams } from "expo-router";
+import { View, Text, ScrollView, Image, TouchableOpacity } from "react-native";
 import { useQuery } from "@tanstack/react-query";
+import { FontAwesome } from "@expo/vector-icons";
 import LoadingBookDetail from "@/components/LoadingBookDetail";
 import { getBookDetails } from "@/services";
 import { EmptyState } from "@/components";
+import {} from "react-native";
 
 const BookDetail = () => {
   const { bookId } = useLocalSearchParams();
@@ -18,10 +20,42 @@ const BookDetail = () => {
     staleTime: 1000 * 60 * 60,
     refetchOnWindowFocus: false,
   });
+  const isBookmarked = false;
 
   return (
     <>
-      <ScrollView className="p-4 bg-dark-primary h-full">
+      <Stack.Screen
+        name="details/[bookId]"
+        options={{
+          title: "Book Detail",
+          headerStyle: { backgroundColor: "#121212" },
+          headerTintColor: "#FFFFFF",
+          headerTitleStyle: {
+            fontWeight: "bold",
+            fontFamily: "fredoka-one-regular",
+          },
+          headerTitle: () => (
+            <Text className="text-primary font-heading-regular text-xl">
+              Book Detail
+            </Text>
+          ),
+          headerRight: () => (
+            <TouchableOpacity
+              onPress={() => {}}
+              style={{
+                marginRight: 15,
+              }}
+            >
+              <FontAwesome
+                name={isBookmarked ? "bookmark" : "bookmark-o"}
+                size={24}
+                color={isBookmarked ? "yellow" : "white"}
+              />
+            </TouchableOpacity>
+          ),
+        }}
+      />
+      <ScrollView className="p-4 bg-dark-primary h-full relative">
         {isLoading ? (
           <LoadingBookDetail />
         ) : error ? (
