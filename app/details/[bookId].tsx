@@ -1,3 +1,4 @@
+import React from "react";
 import { Link, useLocalSearchParams } from "expo-router";
 import { View, Text, ScrollView, Image } from "react-native";
 import { useQuery } from "@tanstack/react-query";
@@ -30,7 +31,7 @@ const BookDetail = () => {
             <Text className="text-2xl font-body-bold text-secondary/75 leading-relaxed">
               {book.data.title}
             </Text>
-            <View className="flex-row my-3">
+            <View className="flex-row items-center my-3">
               <Text className="text-lg font-body-medium text-gray-primary/80">
                 Author:
               </Text>
@@ -120,13 +121,17 @@ const BookDetail = () => {
               </Text>
               {book.data?.genres.length > 0 ? (
                 book.data?.genres.map((item: string, index: number) => (
-                  <Link
-                    className="mr-2 font-body-semibold text-gray-primary"
-                    href={"/"}
-                    key={index}
-                  >
-                    <Text>{item},</Text>
-                  </Link>
+                  <React.Fragment key={index}>
+                    <Link
+                      className="font-body-semibold text-gray-primary"
+                      href={"/"}
+                    >
+                      <Text>{item}</Text>
+                    </Link>
+                    {index < book.data?.genres.length - 1 && (
+                      <Text className="text-gray-primary">, </Text>
+                    )}
+                  </React.Fragment>
                 ))
               ) : (
                 <Text className="font-body-semibold text-gray-primary">-</Text>
