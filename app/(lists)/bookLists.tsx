@@ -1,10 +1,10 @@
+import React, { useMemo } from "react";
 import { View, Text, FlatList } from "react-native";
 import { BookCard, EmptyState, LoadingCard } from "@/components";
 import { Stack, useLocalSearchParams } from "expo-router";
 import { getLatestBooks, getPopularBooks, getTeensBooks } from "@/services";
 import { useQuery } from "@tanstack/react-query";
 import { placeholderData } from "@/utils";
-import { useMemo } from "react";
 
 const BookLists = () => {
   const { list } = useLocalSearchParams();

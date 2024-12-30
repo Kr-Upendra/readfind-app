@@ -1,3 +1,4 @@
+import React from "react";
 import { View, Text, FlatList } from "react-native";
 import { EmptyState, GenreCard, Header, SearchInput } from "@/components";
 import { genres } from "@/utils";

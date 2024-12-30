@@ -1,3 +1,4 @@
+import React from "react";
 import { Header, SearchInput } from "@/components";
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 

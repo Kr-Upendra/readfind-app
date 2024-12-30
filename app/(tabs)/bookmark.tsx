@@ -1,3 +1,4 @@
+import React from "react";
 import { BookCard, EmptyState, Header, SearchInput } from "@/components";
 import { featuredBooks } from "@/utils";
 import { View, Text, FlatList } from "react-native";

@@ -6,7 +6,6 @@ import { FontAwesome } from "@expo/vector-icons";
 import LoadingBookDetail from "@/components/LoadingBookDetail";
 import { getBookDetails } from "@/services";
 import { EmptyState } from "@/components";
-import {} from "react-native";
 
 const BookDetail = () => {
   const { bookId } = useLocalSearchParams();
