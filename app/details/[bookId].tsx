@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, Stack, useLocalSearchParams } from "expo-router";
-import { View, Text, ScrollView, Image, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  ScrollView,
+  Image,
+  TouchableOpacity,
+  Alert,
+} from "react-native";
 import { useQuery } from "@tanstack/react-query";
 import { FontAwesome } from "@expo/vector-icons";
 import LoadingBookDetail from "@/components/LoadingBookDetail";
 import { getBookDetails } from "@/services";
 import { EmptyState } from "@/components";
+import { addBookmark, isBookmarked, removeBookmark } from "@/utils";
 
 const BookDetail = () => {
   const { bookId } = useLocalSearchParams();
@@ -19,7 +27,38 @@ const BookDetail = () => {
     staleTime: 1000 * 60 * 60,
     refetchOnWindowFocus: false,
   });
-  const isBookmarked = false;
+  const [bookmark, setBookmark] = useState(false);
+
+  useEffect(() => {
+    const checkBookmark = async () => {
+      if (book) {
+        const bookmarked = await isBookmarked(bookId as string);
+        setBookmark(bookmarked);
+      }
+    };
+    checkBookmark();
+  }, [book]);
+
+  const toggleBookmark = async () => {
+    if (bookmark) {
+      await removeBookmark(book?.data.id);
+      setBookmark(false);
+      Alert.alert("Unbookmarked", `Book unbookmarked successfully.`, [
+        { text: "OK" },
+      ]);
+    } else {
+      await addBookmark({
+        id: book?.data.id,
+        title: book?.data?.title,
+        image: book?.data?.image,
+        author: book?.data?.author,
+      });
+      setBookmark(true);
+      Alert.alert("Bookmarked", `Book bookmarked successfully..`, [
+        { text: "OK" },
+      ]);
+    }
+  };
 
   return (
     <>
@@ -40,15 +79,15 @@ const BookDetail = () => {
           ),
           headerRight: () => (
             <TouchableOpacity
-              onPress={() => {}}
+              onPress={toggleBookmark}
               style={{
                 marginRight: 15,
               }}
             >
               <FontAwesome
-                name={isBookmarked ? "bookmark" : "bookmark-o"}
+                name={bookmark ? "bookmark" : "bookmark-o"}
                 size={24}
-                color={isBookmarked ? "yellow" : "white"}
+                color={bookmark ? "#FFDD00" : "white"}
               />
             </TouchableOpacity>
           ),
