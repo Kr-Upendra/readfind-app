@@ -6,7 +6,7 @@ import {
   LoadingCard,
   SearchInput,
 } from "@/components";
-import { getBookmarkedBooks, removeAllBookmarks } from "@/utils";
+import { getBookmarkedBooks, placeholderData, removeAllBookmarks } from "@/utils";
 import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
@@ -34,7 +34,7 @@ const BookMark = () => {
     <>
       <Header isSearchOn={false} />
       <FlatList
-        data={bookmarkedBooks}
+        data={isLoading ? placeholderData : bookmarkedBooks}
         keyExtractor={(item) => item.id.toString()}
         numColumns={2}
         renderItem={({ item }) =>

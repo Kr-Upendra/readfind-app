@@ -1,6 +1,6 @@
 import { BookCard, LoadingCard, SectionHeader } from "@/components";
 import icons from "@/constants/icons";
-import { getBookmarkedBooks } from "@/utils";
+import { getBookmarkedBooks, placeholderData } from "@/utils";
 import { useQuery } from "@tanstack/react-query";
 import { router } from "expo-router";
 import React from "react";
@@ -24,7 +24,8 @@ const BookmarkedBooksSection = () => {
           arrowIcon={icons.rightArrow}
         />
         <FlatList
-          data={bookmarkedBooks.slice(0, 10)}
+          data={isLoading ? placeholderData : bookmarkedBooks.slice(0, 10)}
+          keyExtractor={(item) => item.id.toString()}
           horizontal
           renderItem={({ item }) =>
             isLoading ? (
@@ -38,7 +39,6 @@ const BookmarkedBooksSection = () => {
               />
             )
           }
-          keyExtractor={(item) => item.id.toString()}
         />
       </View>
     )
