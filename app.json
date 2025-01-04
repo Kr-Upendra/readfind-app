@@ -8,6 +8,15 @@
     "scheme": "readfind",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "extra": {
+      "apiUrl": "https://api-readfind.onrender.com/api/books/",
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "e4a03d91-398f-4eb1-8d11-cf40acb4d554"
+      }
+    },
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
@@ -21,7 +30,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.upendra.dev.readfind"
     },
     "web": {
       "bundler": "metro",

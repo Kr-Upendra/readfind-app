@@ -1,11 +1,12 @@
-const baseUrl = process.env.EXPO_PUBLIC_API_URL;
+import Constants from "expo-constants";
+const apiUrl = Constants?.expoConfig?.extra?.apiUrl;
 
 export const globalFetch = async (endpoint: string, options = {}) => {
   let header: any = {
     "Content-Type": "application/json",
   };
 
-  const response = await fetch(`${baseUrl}${endpoint}`, {
+  const response = await fetch(`${apiUrl}${endpoint}`, {
     ...options,
     headers: {
       ...header,
