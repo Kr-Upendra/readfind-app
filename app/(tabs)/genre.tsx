@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, FlatList } from "react-native";
 import { EmptyState, GenreCard, Header, SearchInput } from "@/components";
 import { genres } from "@/utils";
+import { router } from "expo-router";
 
 const Genre = () => {
   return (
@@ -16,7 +17,12 @@ const Genre = () => {
             extraStyle="w-[48%] mr-0"
             genre={item.name}
             icon={item.icon}
-            onPress={() => {}}
+            onPress={() =>
+              router.push({
+                pathname: "/(lists)/[category]",
+                params: { category: item.searchWord },
+              })
+            }
           />
         )}
         ListHeaderComponent={() => (
@@ -33,6 +39,9 @@ const Genre = () => {
         }}
         className="p-4 bg-dark-primary"
         ListEmptyComponent={() => <EmptyState />}
+        initialNumToRender={5}
+        maxToRenderPerBatch={10}
+        windowSize={20}
       />
     </>
   );

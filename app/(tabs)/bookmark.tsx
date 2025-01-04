@@ -6,7 +6,11 @@ import {
   LoadingCard,
   SearchInput,
 } from "@/components";
-import { getBookmarkedBooks, placeholderData, removeAllBookmarks } from "@/utils";
+import {
+  getBookmarkedBooks,
+  placeholderData,
+  removeAllBookmarks,
+} from "@/utils";
 import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
@@ -88,6 +92,9 @@ const BookMark = () => {
             message="You have not bookmarked any book yet."
           />
         )}
+        initialNumToRender={5}
+        maxToRenderPerBatch={10}
+        windowSize={20}
       />
     </>
   );

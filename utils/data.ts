@@ -23,7 +23,7 @@ const genres = [
     id: "genre1014",
     name: "LGBT",
     icon: genreIcons.genre_lgbt,
-    searchWord: "Gay, Lesbian, Bisexual and Transgender",
+    searchWord: "Gay%2C%20Lesbian%2C%20Bisexual%20and%20Transgender",
   },
   {
     id: "genre1016",
@@ -84,7 +84,7 @@ const genres = [
     id: "genre1004",
     name: "Children's Books",
     icon: genreIcons.genre_child_book,
-    searchWord: "Children's Books",
+    searchWord: "Children%27s%20Books",
   },
   {
     id: "genre1005",
@@ -102,7 +102,7 @@ const genres = [
     id: "genre1007",
     name: "Cooking, Food and Wine",
     icon: genreIcons.genre_food_wine,
-    searchWord: "Cooking, Food and Wine",
+    searchWord: "Cooking%2C%20Food%20and%20Wine",
   },
   {
     id: "genre1008",
@@ -114,7 +114,7 @@ const genres = [
     id: "genre1009",
     name: "Drama, Plays and Theater",
     icon: genreIcons.genre_drama,
-    searchWord: "Drama, Plays and Theater",
+    searchWord: "Drama%2C%20Plays%20and%20Theater",
   },
   {
     id: "genre1010",
@@ -139,7 +139,7 @@ const genres = [
     id: "genre1015",
     name: "Health, Mind and Body",
     icon: genreIcons.genre_health,
-    searchWord: "Health, Mind and Body",
+    searchWord: "Health%2C%20Mind%20and%20Body",
   },
 
   {
@@ -159,7 +159,7 @@ const genres = [
     id: "genre1021",
     name: "Laws, Issues & Ethics",
     icon: genreIcons.genre_law,
-    searchWord: "Law, Legal Issues and Ethics",
+    searchWord: "Law%2C%20Legal%20Issues%20and%20Ethics",
   },
   {
     id: "genre1022",

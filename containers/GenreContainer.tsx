@@ -20,9 +20,21 @@ const GenreContainer = ({ genres }: Props) => {
         data={genres.slice(0, 10)}
         horizontal
         renderItem={({ item }) => (
-          <GenreCard genre={item.name} icon={item.icon} onPress={() => {}} />
+          <GenreCard
+            genre={item.name}
+            icon={item.icon}
+            onPress={() =>
+              router.push({
+                pathname: "/(lists)/[category]",
+                params: { category: item.searchWord },
+              })
+            }
+          />
         )}
         keyExtractor={(item) => item.id.toString()}
+        initialNumToRender={5}
+        maxToRenderPerBatch={10}
+        windowSize={20}
       />
     </View>
   );

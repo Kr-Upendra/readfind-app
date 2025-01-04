@@ -18,6 +18,12 @@ export const getTeensBooks = async () => {
   });
 };
 
+export const getBooksByCategory = async (category: string, page?: number) => {
+  return globalFetch(`/category/${category}`, {
+    method: "GET",
+  });
+};
+
 export const getBookDetails = async (id: string) => {
   return globalFetch(`/details/${id}`, {
     method: "GET",
